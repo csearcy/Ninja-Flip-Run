@@ -15,6 +15,14 @@
 		971922EB1C6D66C1000987B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 971922E91C6D66C1000987B8 /* LaunchScreen.storyboard */; };
 		971922F61C6D66C1000987B8 /* Jumping_ManTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971922F51C6D66C1000987B8 /* Jumping_ManTests.swift */; };
 		971923011C6D66C1000987B8 /* Jumping_ManUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971923001C6D66C1000987B8 /* Jumping_ManUITests.swift */; };
+		9719230F1C6D7FE5000987B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9719230E1C6D7FE5000987B8 /* GameScene.swift */; };
+		971923111C6D878E000987B8 /* CSMovingGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971923101C6D878E000987B8 /* CSMovingGround.swift */; };
+		971923131C6D9236000987B8 /* CSHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971923121C6D9236000987B8 /* CSHero.swift */; };
+		971923151C6F9A83000987B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971923141C6F9A83000987B8 /* Constants.swift */; };
+		971923171C6F9E02000987B8 /* CSCloudGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971923161C6F9E02000987B8 /* CSCloudGenerator.swift */; };
+		971923191C6F9F0D000987B8 /* CSCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971923181C6F9F0D000987B8 /* CSCloud.swift */; };
+		9719231E1C6FB5E4000987B8 /* CSWallGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9719231D1C6FB5E4000987B8 /* CSWallGenerator.swift */; };
+		971923201C6FB5F0000987B8 /* CSWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9719231F1C6FB5F0000987B8 /* CSWall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		971922FC1C6D66C1000987B8 /* Jumping ManUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jumping ManUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		971923001C6D66C1000987B8 /* Jumping_ManUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumping_ManUITests.swift; sourceTree = "<group>"; };
 		971923021C6D66C1000987B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9719230E1C6D7FE5000987B8 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		971923101C6D878E000987B8 /* CSMovingGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMovingGround.swift; sourceTree = "<group>"; };
+		971923121C6D9236000987B8 /* CSHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSHero.swift; sourceTree = "<group>"; };
+		971923141C6F9A83000987B8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		971923161C6F9E02000987B8 /* CSCloudGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCloudGenerator.swift; sourceTree = "<group>"; };
+		971923181C6F9F0D000987B8 /* CSCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCloud.swift; sourceTree = "<group>"; };
+		9719231D1C6FB5E4000987B8 /* CSWallGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSWallGenerator.swift; sourceTree = "<group>"; };
+		9719231F1C6FB5F0000987B8 /* CSWall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSWall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,12 @@
 				971922DE1C6D66C1000987B8 /* AppDelegate.swift */,
 				971922E01C6D66C1000987B8 /* art.scnassets */,
 				971922E21C6D66C1000987B8 /* GameViewController.swift */,
+				9719230E1C6D7FE5000987B8 /* GameScene.swift */,
+				971923121C6D9236000987B8 /* CSHero.swift */,
+				971923211C6FB5FB000987B8 /* Wall Generator */,
+				971923141C6F9A83000987B8 /* Constants.swift */,
+				9719231A1C6F9F1E000987B8 /* Cloud Generation */,
+				971923101C6D878E000987B8 /* CSMovingGround.swift */,
 				971922E41C6D66C1000987B8 /* Main.storyboard */,
 				971922E71C6D66C1000987B8 /* Assets.xcassets */,
 				971922E91C6D66C1000987B8 /* LaunchScreen.storyboard */,
@@ -126,6 +148,24 @@
 				971923021C6D66C1000987B8 /* Info.plist */,
 			);
 			path = "Jumping ManUITests";
+			sourceTree = "<group>";
+		};
+		9719231A1C6F9F1E000987B8 /* Cloud Generation */ = {
+			isa = PBXGroup;
+			children = (
+				971923161C6F9E02000987B8 /* CSCloudGenerator.swift */,
+				971923181C6F9F0D000987B8 /* CSCloud.swift */,
+			);
+			name = "Cloud Generation";
+			sourceTree = "<group>";
+		};
+		971923211C6FB5FB000987B8 /* Wall Generator */ = {
+			isa = PBXGroup;
+			children = (
+				9719231D1C6FB5E4000987B8 /* CSWallGenerator.swift */,
+				9719231F1C6FB5F0000987B8 /* CSWall.swift */,
+			);
+			name = "Wall Generator";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +303,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971923111C6D878E000987B8 /* CSMovingGround.swift in Sources */,
+				971923131C6D9236000987B8 /* CSHero.swift in Sources */,
+				9719230F1C6D7FE5000987B8 /* GameScene.swift in Sources */,
 				971922E31C6D66C1000987B8 /* GameViewController.swift in Sources */,
+				971923171C6F9E02000987B8 /* CSCloudGenerator.swift in Sources */,
+				971923201C6FB5F0000987B8 /* CSWall.swift in Sources */,
+				971923191C6F9F0D000987B8 /* CSCloud.swift in Sources */,
+				9719231E1C6FB5E4000987B8 /* CSWallGenerator.swift in Sources */,
 				971922DF1C6D66C1000987B8 /* AppDelegate.swift in Sources */,
+				971923151C6F9A83000987B8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
