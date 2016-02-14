@@ -168,7 +168,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	
 	func gameOver() {
 		isGameOver = true
+		Pausebutton.hidden = true
+		Continuebutton.hidden = true
 		
+		let PauseLabel = childNodeWithName("pauseLabel")
+		PauseLabel?.removeFromParent()
+
 		// stop everything
 		hero.fall()
 		wallGenerator.stopWalls()
@@ -207,6 +212,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		let newGameScene = GameScene(size: view!.bounds.size)
 		
 		view!.presentScene(newGameScene)
+	}
+	
+	func ResumeGame()	{
+		let PauseLabel = childNodeWithName("pauseLabel")
+		PauseLabel?.removeFromParent()
+		hero.startRunning()
+		//runAction(movingGround.resetPosition())
+		movingGround.start()
+		wallGenerator.resumeMoving()
+		wallGenerator.startGeneratingWallsEvery(1)
+		Pausebutton.hidden = false
 	}
 	
 	// MARK: - SKPhysicsContactDelegate
@@ -293,11 +309,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		Continuebutton.hidden = true
 		Pausebutton.hidden = false
 		
-		let PauseLabel = childNodeWithName("pauseLabel")
-		PauseLabel?.removeFromParent()
-		
 		// restart everything
-		start()
+		ResumeGame()
 		
 	}
 

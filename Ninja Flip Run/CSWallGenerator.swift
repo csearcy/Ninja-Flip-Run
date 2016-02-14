@@ -58,8 +58,13 @@ class CSWallGenerator: SKSpriteNode {
 		for wall in walls {
 			wall.stopMoving()
 		}
+	}
+	
+	func resumeMoving() {
 		
-		
+		for wall in walls {
+			wall.startMoving()
+		}
 	}
 	
 	func loadPhysicsBodyWithSize(size: CGSize) {
