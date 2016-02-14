@@ -23,6 +23,7 @@
 		971923191C6F9F0D000987B8 /* CSCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971923181C6F9F0D000987B8 /* CSCloud.swift */; };
 		9719231E1C6FB5E4000987B8 /* CSWallGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9719231D1C6FB5E4000987B8 /* CSWallGenerator.swift */; };
 		971923201C6FB5F0000987B8 /* CSWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9719231F1C6FB5F0000987B8 /* CSWall.swift */; };
+		97E5E3AE1C6FF5F2005AE9D9 /* CSPointsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E5E3AD1C6FF5F2005AE9D9 /* CSPointsLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		971923181C6F9F0D000987B8 /* CSCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCloud.swift; sourceTree = "<group>"; };
 		9719231D1C6FB5E4000987B8 /* CSWallGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSWallGenerator.swift; sourceTree = "<group>"; };
 		9719231F1C6FB5F0000987B8 /* CSWall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSWall.swift; sourceTree = "<group>"; };
+		97E5E3AD1C6FF5F2005AE9D9 /* CSPointsLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSPointsLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				971922E01C6D66C1000987B8 /* art.scnassets */,
 				971922E21C6D66C1000987B8 /* GameViewController.swift */,
 				9719230E1C6D7FE5000987B8 /* GameScene.swift */,
+				97E5E3AD1C6FF5F2005AE9D9 /* CSPointsLabel.swift */,
 				971923121C6D9236000987B8 /* CSHero.swift */,
 				971923211C6FB5FB000987B8 /* Wall Generator */,
 				971923141C6F9A83000987B8 /* Constants.swift */,
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				971923111C6D878E000987B8 /* CSMovingGround.swift in Sources */,
+				97E5E3AE1C6FF5F2005AE9D9 /* CSPointsLabel.swift in Sources */,
 				971923131C6D9236000987B8 /* CSHero.swift in Sources */,
 				9719230F1C6D7FE5000987B8 /* GameScene.swift in Sources */,
 				971922E31C6D66C1000987B8 /* GameViewController.swift in Sources */,
@@ -539,6 +543,7 @@
 				971923071C6D66C1000987B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		971923081C6D66C1000987B8 /* Build configuration list for PBXNativeTarget "Jumping ManTests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +552,7 @@
 				9719230A1C6D66C1000987B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9719230B1C6D66C1000987B8 /* Build configuration list for PBXNativeTarget "Jumping ManUITests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +561,7 @@
 				9719230D1C6D66C1000987B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -44,7 +44,9 @@ class CSMovingGround: SKSpriteNode {
 	}
 
 	func start() {
-		let moveLeft = SKAction.moveByX(-frame.size.width/2, y: 0, duration: 1.0)
+		let adjustedDuration = NSTimeInterval(frame.size.width/kDefaultXToMovePerSecond)
+		
+		let moveLeft = SKAction.moveByX(-frame.size.width/2, y: 0, duration: adjustedDuration/2)
 		let resetPosition = SKAction.moveToX(0, duration: 0)
 		
 		let moveSequence = SKAction.sequence([moveLeft, resetPosition])
@@ -53,5 +55,8 @@ class CSMovingGround: SKSpriteNode {
 		
 	}
 	
+	func stop() {
+		removeAllActions()
+	}
 	
 }

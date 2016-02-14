@@ -14,17 +14,27 @@ class CSHero: SKSpriteNode {
 	var body, upperArm, leftFoot, rightFoot: SKSpriteNode!
 	var foreArm: SKSpriteNode!
 	var isUpsideDown = false
+	let bodyWidth: CGFloat = 32.0
+	let bodyHeight: CGFloat = 44.0
 	
 	init() {
+		let heroSize: CGSize = CGSizeMake(bodyWidth, bodyHeight)
+		super.init(texture: nil, color: UIColor.clearColor(), size: heroSize)
+
+		loadAppearance()
+		loadPhysicsBodyWithSize(heroSize)
 		
+	}
+
+	required init?(coder aDecoder: NSCoder) {
+	    fatalError("init(coder:) has not been implemented")
+	}
+	
+	func loadAppearance() {
 		let skinColor = UIColor(red: 207.0/255.0, green: 193.0/255.0, blue: 168.0/255.0, alpha: 1.0)
-		let bodyWidth: CGFloat = 32.0
-		let bodyHeight: CGFloat = 44.0
 		let footWidth: CGFloat = 0.25*bodyWidth
 		let shoeColor: UIColor = UIColor.blackColor()
 		let armColor: UIColor = UIColor(red: 46.0/255.0, green: 46.0/255.0, blue: 46.0/255.0, alpha: 1.0)
-		
-		super.init(texture: nil, color: UIColor.clearColor(), size: CGSizeMake(bodyWidth, bodyHeight))
 		
 		// Create Ninja Body
 		body = SKSpriteNode(color: UIColor.blackColor(), size: CGSizeMake(32, 40))
@@ -65,7 +75,7 @@ class CSHero: SKSpriteNode {
 		upperArm.position = CGPointMake(-10,-5)
 		//upperArm.position = CGPointMake(-body.size.width/2+upperArm.size.width,-5)
 		body.addChild(upperArm)
-
+		
 		foreArm = SKSpriteNode(color: armColor, size: CGSizeMake(7, 5))
 		foreArm.position = CGPointMake(0, -upperArm.size.height)
 		upperArm.addChild(foreArm)
@@ -82,14 +92,7 @@ class CSHero: SKSpriteNode {
 		rightFoot = leftFoot.copy() as! SKSpriteNode
 		rightFoot.position = CGPointMake(bodyWidth/4, -bodyHeight/2.0 + footHeight/2)
 		addChild(rightFoot)
-		
-		
 	}
-
-	required init?(coder aDecoder: NSCoder) {
-	    fatalError("init(coder:) has not been implemented")
-	}
-	
 	
 	func startRunning() {
 		let rotateUp = SKAction.rotateByAngle(CGFloat(M_PI/2), duration: 0.1)
@@ -144,6 +147,14 @@ class CSHero: SKSpriteNode {
 		
 	}
 	
+	func fall() {
+		physicsBody?.affectedByGravity = true
+		physicsBody?.applyImpulse(CGVectorMake(-5, 30))
+		
+		let rotateBack = SKAction.rotateByAngle(CGFloat(M_PI)/2, duration: 0.4)
+		runAction(rotateBack)
+	}
+	
 	func breath() {
 		
 		let BreathOut = SKAction.moveByX(0, y: -2, duration: 1)
@@ -154,8 +165,23 @@ class CSHero: SKSpriteNode {
 		
 	}
 	
+	func loadPhysicsBodyWithSize(size: CGSize) {
+		
+		physicsBody = SKPhysicsBody(rectangleOfSize: size)
+		physicsBody?.contactTestBitMask = heroCategory
+		physicsBody?.contactTestBitMask = wallCategory
+		physicsBody?.affectedByGravity = false
+	}
+
+	
 	func stop() {
 		body.removeAllActions()
+		leftFoot.removeAllActions()
+		rightFoot.removeAllActions()
+		upperArm.removeAllActions()
+		foreArm.removeAllActions()
+		
 	}
+	
 	
 }

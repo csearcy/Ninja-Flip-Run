@@ -49,4 +49,8 @@ class CSCloudGenerator: SKSpriteNode {
 		
 	}
 	
+	func stopGenerating() {
+		generationTimer.invalidate()
+	}
+	
 }
